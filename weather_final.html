@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <meta charset="utf-8">
+      <link rel="stylesheet"  href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+      <title>OpenWeatherMap Integration</title>
+      <style>
+         #wind_direction, #wind_speed, #wind_speed_unit, #wind_degree_unit, #weather_conditions, #main_temp_unit, #main_temp {color: red; font-weight: bold;}
+         body {margin:20px;}
+      </style>
+   </head>
+   <body>
+      <script>
+         function checkWind() {
+           var settings = {
+             "async": true,
+             "crossDomain": true,
+             "dataType": "json",
+             "url": "https://api.openweathermap.org/data/2.5/weather?zip=49930,us&appid=b31b47263186608a292e8df446de04f4&units=imperial",
+             "method": "GET"
+         }
+
+           $.ajax(settings)
+
+           .done(function (response) {
+             console.log(response);
+
+         $("#wind_speed").append (response.wind.speed);
+         $("#wind_direction").append (response.wind.deg);
+         $("#main_temp").append (response.main.temp);
+         $("#weather_conditions").append (response.weather[0].main);
+         $("#precipitation").append (response.precipitation);
+         $("#wind_speed_unit").append (" MPH");
+         $("#wind_degree_unit").append (" degrees");
+         $("#main_temp_unit").append (" F");
+         $("#precip_unit").append (" mm");
+         });
+         }
+      </script>
+      <script>
+         function deleteItems() {
+         $("#main_temp_div").find('span').html('');
+         $("#wind_speed_div").find('span').html('');
+         $("#wind_direction_div").find('span').html('');
+         $("#weather_conditions_div").find('span').html('');
+         $("#precipitation_div").find('span').html('');
+         }
+      </script>
+      <h2>Wind conditions for Hancock, MI</h2>
+       <button type="button" onclick="deleteItems(); checkWind()" class="btn btn-primary weatherbutton">Check wind conditions</button>
+       <button onclick="deleteItems()" class="btn btn-secondary weatherbutton">Clear</button></br></br>
+      
+      <span><b>Temperature: </b></span><div id="main_temp_div"><span id="main_temp"></span><span id="main_temp_unit"></span></div><br/>
+      <span><b>Wind speed: </b></span><div id="wind_speed_div"><span id="wind_speed"></span> <span id="wind_speed_unit"></span></div><br/>
+      <span><b>Wind direction: </b></span><div id="wind_direction_div"><span id="wind_direction"></span><span id="wind_degree_unit"></span></div><br/>
+      <span><b>Current conditions: </b></span><div id="weather_conditions_div"><span id="weather_conditions"></span></div></br>
+      <span><b>HOW MUCH: </b></span><div id="precipitation_div"><span id="weather_conditions"></span><span id="precip_unit"></span></div>
+   </body>
+</html>
