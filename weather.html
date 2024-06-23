@@ -41,12 +41,23 @@
     });
     }
     </script>
-    <button type="button" onclick="checkWind()" class="btn btn-primary weatherbutton">HOW MUCH</button>
+    <script>
+         function deleteItems() {
+         $("#main_temp_div").find('span').html('');
+         $("#wind_speed_div").find('span').html('');
+         $("#wind_direction_div").find('span').html('');
+         $("#weather_conditions_div").find('span').html('');
+         $("#precipitation_snow_div").find('span').html('');
+         $("#town_name_div").find('span').html('');
+         }
+    </script>
+    <button type="button" onclick="deleteItems(); checkWind()" class="btn btn-primary weatherbutton">HOW MUCH</button>
+    <button onclick="deleteItems()" class="btn btn-secondary weatherbutton">Clear</button></br></br>
     <h2>HOW MUCH SNOW for <div id="town_name_div"><span id="town_name"></span> <span id="country_name"></span></div></h2>
-    <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br>
-    <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br>
-    <span><b>Wind direction: </b></span><span id="wind_direction"></span><span id="wind_degree_unit"></span><br>
-    <span><b>Current conditions: </b></span><span id="weather_conditions"></span></br>
+    <span><b>Temperature: </b></span><div id="main_temp_div"><span id="main_temp"></span><span id="main_temp_unit"></span></div><br>
+    <span><b>Wind speed: </b></span><div id="wind_speed_div"><span id="wind_speed"></span> <span id="wind_speed_unit"></span></div><br>
+    <span><b>Wind direction: </b></span><div id="wind_direction_div"><span id="wind_direction"></span><span id="wind_degree_unit"></span></div><br>
+    <span><b>Current conditions: </b></span><div id="weather_conditions_div"><span id="weather_conditions"></span></div></br>
     <span><b>HOW MUCH: </b></span><div id="precipitation_div"><span id="precipitation"></span><span id="precip_unit"></span></div>
     
     </body>
