@@ -4,11 +4,11 @@ I'm from a snowy area of the United States. When you grow up in a place that sno
 
 In an agile scrum development environment, engineers work with product managers to create software solutions to serve needs that the marketplace demands. Product managers describe feature requirements to engineers. Engineers develop tools to meet product manager specifications. Project managers liase between product managers and engineers to communicate goals, organize work, update schedules, and track progress for the entire team.
 
+My position in any organization is unique. On a given project, I may be exposed to any domain from business development, to engineering, to content creation and management. 
+
 I took Tom Johnson's [Documentating APIs course](https://idratherbewriting.com/learnapidoc/) to prepare for more API-based, developer-facing technical documentation projects. Tom used an actual REST API to retrieve [weather conditions for Santa Clara, CA](https://idratherbewriting.com/assets/files/wind-openweathermap.html). I realized I can modify this product to solve a need.
 
 # What is How-Much?  
-
-My position in any organization is unique. On a given project, I may be exposed to any domain from business development, to engineering, to content creation and management. 
 
 How-Much is a **very simple** development project for an **extremely basic** web-based weather application. The purpose of this is project is to demonstrate my unique abilities to: 
 
