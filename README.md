@@ -21,3 +21,10 @@ How-Much is a **very simple** development project for an **extremely basic** web
 The iterative code for **How-Much** provides a **rudimentary** example scenario of a scrum/agile development environment for a weather application that uses a web-based API. 
 
 Click [here](https://github.com/users/adkent77/projects/1) to see the project board with tasks and code samples.
+
+# How Do I See How-Much?
+If you want to see the basic web-based weather application and test it out:
+
+1. Download the `weather.html` file in this repository.
+2. Open the file with your web browser (e.g., Google Chrome).
+3. Click the **HOW MUCH** button. 
